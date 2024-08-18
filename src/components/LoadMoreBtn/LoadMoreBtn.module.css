@@ -1,0 +1,19 @@
+.button {
+  background-color: #5A72A0;
+  color: #FAFAFA;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 300ms, color 300ms, font-weight 300ms, transform 300ms;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+  background-color: #3b5998;
+  color: #FAFAFA;
+  font-weight: 700;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}

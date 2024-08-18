@@ -1,0 +1,84 @@
+:root {
+    --primary-color: #8A2BE2; /* Сменил на цвет Electric Purple */
+    --secondary-color: #FFFFFF; /* Чисто белый для контраста */
+    --hover-color: #FF69B4; /* Сменил на ярко-розовый (Hot Pink) */
+    --font-size: clamp(1rem, 1.2vw, 1.2rem);
+    --input-width: minmax(250px, 300px);
+    --gap-size: 1.25rem;
+    --padding-y: 0.625rem;
+}
+
+.header {
+    width: 100%;
+    background-color: #8A2BE2;
+    top: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.625rem 0;
+    z-index: 1000;
+    animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    padding: 0.625rem 0;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.input {
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.input:focus {
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.5); /* Подсветка Electric Purple */
+}
+
+.button {
+    background-color: #FFFFFF;
+    transition: background-color 300ms, color 300ms, font-weight 300ms, transform 300ms;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background-color: #FF69B4;
+    color: #FFFFFF;
+    font-weight: 700;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
